@@ -1,10 +1,10 @@
 # 🖼️ pikchr.nvim
 
-**Live-render [Pikchr](https://pikchr.org/) diagrams in your browser, directly from Neovim.**
+**Live-render [Pikchr](https://pikchr.org/) (pronounced "picture") diagrams in your browser, directly from Neovim.**
 
 `pikchr.nvim` is a Neovim plugin that watches `.pikchr` files and renders them as SVG in your browser using WebAssembly. Every time you save or edit your file, the diagram is automatically updated in real-time.
 
----
+![demo](./doc/images/demo.gif)
 
 ## ✨ Features
 
@@ -20,16 +20,16 @@
 Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
-	{
-		"Cih2001/pikchr.nvim",
-		lazy = false, -- or set true for lazy loading
-		cmd = "Pikchr",
-		config = function()
-			require("pikchr").setup({
-				server_port = 1234,
-			})
-		end,
-	},
+{
+    "Cih2001/pikchr.nvim",
+    lazy = false, -- or set true for lazy loading
+    cmd = "Pikchr",
+    config = function()
+        require("pikchr").setup({
+            server_port = 1234,
+        })
+    end,
+},
 ```
 
 ## Usage
